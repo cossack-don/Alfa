@@ -1,0 +1,16 @@
+{
+    // Extend the *server's* tsconfig, because we import server libs in Cypress
+    // tasks
+    "compilerOptions": {
+        "outDir": "../dist-cypress",
+        "noEmit": false,
+        "types": ["cypress"],
+        // Cypress uses Webpack to compile tests, and that blows up if we target
+        // anything newer than ES2019
+        "target": "ES2019"
+    },
+    // The 'exclude' line is necessary to override the root tsconfig's exclusion
+    // of the server code
+    "exclude": [],
+    "include": ["**/*.ts"]
+}

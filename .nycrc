@@ -1,0 +1,16 @@
+{
+    "check-coverage": true,
+    "all": true,
+    "excludeAfterRemap": true,
+    "report-dir": "coverage",
+    "reporter": ["text", "json", "html"],
+    "extension": [".js", ".vue", ".ts"],
+    "include": [
+    "resources/lk/**/*.ts",
+    "resources/lk/**/*.js",
+    "resources/lk/**/*.vue"
+    ],
+    "exclude": ["node_modules"]
+}
+
+

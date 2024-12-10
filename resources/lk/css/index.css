@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+:root {
+    --white:#fff;
+    --black:#000;
+    --red: #ff0032;
+    --red-hover:#cc061a;
+    --gray: #f2f3f7;
+    --gray-hover: #e2e5eb;
+}
+
+/*helpers*/
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-justify-between {
+    justify-content: space-between;
+}

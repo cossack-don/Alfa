@@ -1,0 +1,1 @@
+console.log('SCRIPT_LANDING_LARAVEL_PAGE')

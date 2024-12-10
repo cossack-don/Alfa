@@ -1,0 +1,38 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite",
+        "test-ui": "npx cypress open",
+        "coverage:verify": "npx nyc report --check-coverage true --lines 100",
+        "pretest": "rimraf .nyc_output .cache coverage dist",
+        "coverage:check-files": "check-coverage resources && only-covered resources",
+        "test": "nyc --reporter=lcov --reporter=text npx cypress open",
+        "test3": "npx cypress run",
+        "coverage:run": "cypress run --env coverage=true",
+        "coverage": "npx nyc --reporter=lcov npm run test3",
+        "test2": "nyc --reporter=lcov --reporter=text npx cypress run cypress/e2e/**/*.{cy,spec}.{js,jsx,ts,tsx}"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.26.0",
+        "@cypress/code-coverage": "^3.13.8",
+        "autoprefixer": "^10.4.20",
+        "axios": "^1.7.4",
+        "babel-plugin-istanbul": "^7.0.0",
+        "concurrently": "^9.0.1",
+        "cypress": "^13.16.1",
+        "laravel-vite-plugin": "^1.0",
+        "nyc": "^17.1.0",
+        "pinia": "^2.3.0",
+        "postcss": "^8.4.47",
+        "tailwindcss": "^3.4.13",
+        "typescript": "^5.7.2",
+        "vite": "^5.0",
+        "vue": "^3.5.13",
+        "vue-router": "^4.5.0"
+    },
+    "dependencies": {
+        "@vitejs/plugin-vue": "^5.2.1"
+    }
+}
